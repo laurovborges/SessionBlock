@@ -1,0 +1,13 @@
+{
+  "name": "SessionBlock",
+  "description": "Site blocker extension that allows for timed unblocks",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs"]
+}

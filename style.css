@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: rgb(59, 59, 64);
+    --secondary-bg-color: rgb(102, 102, 108);
+    color-scheme: dark;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: arial;
+    color: white;
+    column-gap: 1px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.main-window {
+    background-color: var(--main-bg-color);
+    width: 300px;
+    height: 400px;
+    padding: 15px;
+    padding-top: 0;
+    overflow-y:auto
+}
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container-left {
+    width: 50%;
+}
+
+.title-container-middle {
+    width: 100%;
+}
+
+.title-container-right {
+    width: 50%;
+}
+
+#settings-title{
+    position: sticky;
+    top: 0;
+    background: linear-gradient(var(--main-bg-color) 85%, rgba(128, 128, 128, 0));
+    padding: 15px 0 15px 0;
+}
+
+#settings-title h1 {
+    margin: 0;
+}
+
+#sessionblock-title{
+    text-align: center;
+    margin: 15px 0 15px 0;
+    font-size: 25px;
+}
+
+.dashboard {
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.dashboard-top{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.dashboard-topleft{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-topright{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-bottom{
+    height: 50%;
+    text-align: center;
+}
+
+#start-button {
+    color: rgb(6, 99, 6);
+    margin: 0;
+    background-color: rgb(134, 238, 125);
+    border: 3px solid rgb(232, 232, 232);
+}
+
+.disabled{
+    background-color: rgb(255, 151, 151) !important;
+    color: rgb(107, 0, 0) !important;
+    pointer-events: none;
+}
+
+.out-of-unblocks{
+    background-color: rgb(255, 218, 117) !important;
+    color: rgb(150, 90, 0) !important;
+    height: 50px;
+    pointer-events: none;
+}
+
+#countdown {
+    text-align: center;
+    margin: 0;
+}
+
+button {
+    margin-bottom: 15px;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--secondary-bg-color);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s background-color cubic-bezier(0,1.05,.42,1);
+}
+
+button:hover {
+    background-color: rgb(154, 154, 154);
+}
+
+#back-to-main-button {
+    width: 100%;
+    margin: 0;
+    height: 30px
+}
+
+
+.time-input{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    border: 3px solid rgb(188, 188, 188);
+    color-scheme: light;
+}
+
+.time-inputs-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+#time-colon{
+    margin: 0;
+    font-size: 30px;
+    line-height: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
+
+.modal {
+    height: 350px;
+    width: 250px;
+    background-color: rgb(101, 101, 101);
+    border-radius: 5px;
+    border: 3px solid rgb(182, 182, 182);
+    color-scheme: light;
+}
+
+.modal h1 {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 80%;
+}
+
+.close-modal-button{
+    display: inline-block;
+    width: 20%;
+    border: 3px solid rgb(189, 189, 189);
+    height: 30px;
+}
+
+.list-input {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 15px;
+    background-color: rgb(229, 229, 229);
+    margin: 0;
+    resize: none;
+    font-family: arial;
+}
+
+.days-of-week-container {
+    width: 100%;
+    height: 40px;
+    background-color: var(--secondary-bg-color);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+}
+
+.week-button{
+    border-right: 1.5px solid rgb(210, 210, 210);
+    border-radius: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+.week-button:hover {
+    background-color: rgb(128, 128, 135);
+}
+
+.week-button:last-of-type{
+    border-right: none;
+}
+
+.selected{
+    background-color: rgb(160, 160, 160);
+}
+
+.inactive {
+    background-color: rgb(171, 171, 171) !important;
+    color: rgb(28, 28, 28) !important;
+    pointer-events: none;
+    height: 50px;
+}
+
+.input-label {
+    font-size: 15px;
+}
+
+#save-button {
+    width: 100%;
+    margin: 0;
+    height: 30px;
+}
+
+#allowed-urls-button {
+    margin-bottom: 0;
+}
+
+#settings-page {
+    padding-bottom: 0;
+}
+
+#block-website-button {
+    margin-bottom: 0;
+}

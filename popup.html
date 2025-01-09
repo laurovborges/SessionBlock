@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SessionBlock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-window" id="main-page">
+    <div class="title-container">
+      <h1 id="sessionblock-title">SessionBlock</h1>
+    </div>
+    <div class="dashboard">
+      <div class="dashboard-top">
+        <div class="dashboard-topleft">
+          <button id="start-button" type="button"><b>Unblock</b></button>
+        </div>
+        <div class="dashboard-topright">
+          <h2 id="countdown"><span id="hours-text">00</span>:<span id="minutes-text">00</span>:<span id="seconds-text">00</span></h2>
+        </div>
+      </div>
+      <div class="dashboard-bottom">
+        <p1 id="remaining-unblocks-text-body" style="font-size: 16px"><span id="remaining-unblocks-text">0</span>/<span id="total-unblocks-text">0</span> unblocks remaining</p1>
+      </div>
+    </div>
+    <button class="hide" type="button" id="end-early-button">End Unblock Session Early</button>
+    <button type="button" id="settings-button">Settings ></button>
+    <button type="button" id="allow-url-button">Allow This Specific URL</button>
+    <button type="button" id="block-website-button">Block This Website</button>
+  </div>
+
+  <div class="main-window hide" id="settings-page">
+    <form>
+      <div class="title-container" id="settings-title">
+        <div class="title-container-left">
+          <button type="button" id="back-to-main-button"><</button>
+        </div>
+        <div class="title-container-middle">
+          <h1 id="sessionblock-title">Settings</h1>
+        </div>
+        <div class="title-container-right">
+          <button type="submit" id="save-button">Save</button>
+        </div>
+      </div>
+      <div class="dashboard">
+        <label for="time-inputs-container" class="input-label">Unblock session duration</label>
+        <div class="time-inputs-container" id="time-inputs-container">
+          <input class="time-input" id="hours-input" type="number" max="23" min="0">
+          <p>hrs</p>
+          <p id="time-colon">:</p>
+          <input class="time-input" type="number" id="mins-input" max="59" min="0">
+          <p>mins</p>
+        </div>
+      </div>
+      <div class="dashboard">
+        <label for="unblocks-per-day-input" class="input-label">Unblocks per day:</label>
+        <input class="time-input" id="unblocks-per-day-input" type="number" placeholder="#" max="999" min="0">
+      </div>
+      <div class="days-of-week-container">
+        <button class="week-button" id="sunday" type="button">Sun</button>
+        <button class="week-button" id="monday" type="button">Mon</button>
+        <button class="week-button" id="tuesday" type="button">Tue</button>
+        <button class="week-button" id="wednesday" type="button">Wed</button>
+        <button class="week-button" id="thursday" type="button">Thu</button>
+        <button class="week-button" id="friday" type="button">Fri</button>
+        <button class="week-button" id="saturday" type="button">Sat</button>
+      </div>
+      <button type="button" id="blocklist-button">Website Blocklist ></button>
+      <dialog id="blocklist-modal" class="modal">
+        <h1>Blocklist</h1><button type="button" class="close-modal-button" id="close-blocklist-button">X</button>
+        <textarea class="list-input" type="text" id="blocklist-input" placeholder="Each website much be separated with a new line:&#13;&#10;example1.com&#13;&#10;example2.com" rows="3"></textarea>
+      </dialog>
+      <button type="button" id="allowed-urls-button">Allowed URL's ></button>
+      <dialog id="allowed-urls-modal" class="modal">
+        <h1>Allowed URL's</h1><button type="button" class="close-modal-button" id="close-allowed-urls-button">X</button>
+        <textarea class="list-input" type="text" id="allowed-urls-input" placeholder="Each website much be separated with a new line and must be the full link. For example:&#13;&#10;https://www.example.com/path&#13;&#10;https://www.youtube.com/watch?v=dQw4w9WgXcQ"></textarea>
+      </dialog>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
