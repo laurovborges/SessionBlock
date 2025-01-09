@@ -28,7 +28,7 @@ If there are specific URLs from a blocked site that you would still like to acce
 <img width="245" alt="sessionblock_whitelist" src="https://github.com/user-attachments/assets/829bebe6-c783-400c-bd8b-5c8e82cb90c8" />
 
 ### Step 3:
-Make sure to save your changes! After doing so, the sites you listed will be blocked. Now, whenever you feel like taking a break, you can click the Unblock button which will start the timer and temporarily grant you access to all your distractions!
+**Make sure to save your changes!** After doing so, the sites you listed will be blocked. Now, whenever you feel like taking a break, you can click the Unblock button which will start the timer and temporarily grant you access to all your distractions!
 <br/>
 <br/>
 <img width="241" alt="sessionblock_mainpage" src="https://github.com/user-attachments/assets/1f2b47a2-593b-41df-a944-36ec3d6e75a2" />
