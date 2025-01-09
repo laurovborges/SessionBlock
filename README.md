@@ -8,7 +8,7 @@ With this chrome extension, you can give yourself timed breaks that unlock all t
 * Configurable unblock duration and unblocks per day
 * Choose what days of the week the extension is active
 * Allow specific URL exceptions (such as a specific YouTube video)
-* Customizable block page message
+* Customizable block page message (WIP)
 
 ## Usage:
 ### Step 1:
