@@ -1,3 +1,4 @@
+![sessionblock_icon_128](https://github.com/user-attachments/assets/40e87bf8-9ee8-455e-ac0f-9f94fd5ba1bb)
 # SessionBlock
 ### A chrome extension that blocks distracting sites while allowing for a limited number of temporary unblock sessions per day.
 
