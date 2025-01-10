@@ -15,25 +15,33 @@ body {
 }
 
 .title-container {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-.block-message-container {
+#block-message-container {
     font-size: 20px;
     background-color: rgb(48, 48, 48);
     text-align: center;
     border-radius: 10px;
     padding: 40px;
     width: 500px;;
-    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .block-message-container p {
     margin: 0;
     font-size: 35px;
+}
+
+#blockpage-emoji-text {
+    font-size: 40px;
+    margin: 0;
+}
+
+.hide {
+    display: none !important;
 }

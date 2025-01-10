@@ -24,7 +24,12 @@ const closeAllowedURLsButton = document.getElementById("close-allowed-urls-butto
 const endEarlyBtn = document.getElementById("end-early-button");
 const form = document.querySelector("form");
 const blockWebsiteBtn = document.getElementById("block-website-button");
-const currentDate = new Date()
+const blockpageMessageBtn = document.getElementById("blockpage-message-button");
+const blockpageMessageModal = document.getElementById("blockpage-message-modal");
+const blockpageMessageInput = document.getElementById("blockpage-message-input");
+const closeBlockpageMessageBtn = document.getElementById("close-blockpage-message-button");
+const blockpageEmojiInput = document.getElementById("blockpage-emoji-input");
+const currentDate = new Date();
 let userData = { // default settings
     seconds: 0,
     minutes: 20,
@@ -35,7 +40,9 @@ let userData = { // default settings
     blocklist: [],
     daysOfWeek: [0, 1, 2, 3, 4, 5, 6],
     countdownIsRunning: false,
-    lastDayOfWeekAccessed: 0
+    lastDayOfWeekAccessed: 0,
+    blockPageMessage: "Don't get too distracted now...",
+    blockPageEmoji: "🤨"
 };
 
 chrome.storage.local.get(["userData"], (result) => {
@@ -101,6 +108,8 @@ function updateTextValues(){
     blocklistInput.value = userData.blocklist.join("\n");
     allowedURLsInput.value = userData.allowedURLs.join("\n");
     unblocksPerDayInput.value = userData.unblocksPerDay ? userData.unblocksPerDay : 1;
+    blockpageMessageInput.value = userData.blockPageMessage ? userData.blockPageMessage : "";
+    blockpageEmojiInput.value = userData.blockPageEmoji ? userData.blockPageEmoji : "";
 }
 
 // save button
@@ -112,6 +121,8 @@ form.addEventListener('submit', (e) => {
     userData.hours = Number(hoursInput.value);
     userData.unblocksPerDay = Number(unblocksPerDayInput.value);
     userData.blocklist = blocklistInput.value.split('\n');
+    userData.blockPageMessage = blockpageMessageInput.value;
+    userData.blockPageEmoji = blockpageEmojiInput.value;
     for(let i = 0; i < userData.blocklist.length; i++){
         userData.blocklist[i] = userData.blocklist[i].replace(/^https?:\/\//, '')
     }
@@ -246,7 +257,25 @@ closeAllowedURLsButton.addEventListener('click', () => {
     allowedURLsModal.close();
 })
 
+blockpageMessageBtn.addEventListener('click', () => {
+    blockpageMessageModal.showModal();
+})
+
+closeBlockpageMessageBtn.addEventListener('click', () => {
+    blockpageMessageModal.close();
+})
+
 let saveButtonClicked = true;
+
+blockpageMessageInput.addEventListener('input', () => {
+    saveButton.innerText = "Save";
+    saveButtonClicked = false;
+})
+
+blockpageEmojiInput.addEventListener('input', () => {
+    saveButton.innerText = "Save";
+    saveButtonClicked = false;
+})
 
 blocklistInput.addEventListener('input', () => {
     saveButton.innerText = "Save";
