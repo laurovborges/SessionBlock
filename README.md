@@ -35,9 +35,14 @@ If there are specific URLs from a blocked site that you would still like to acce
 <img width="245" alt="sessionblock_unblocked" src="https://github.com/user-attachments/assets/8b003329-c7ea-47f9-861e-03f6760b658f" />
 
 ## Installation
-I plan on putting this extension on the Chrome Web Store soon. For now, you can follow <a href="https://bashvlas.com/blog/install-chrome-extension-in-developer-mode" target="_blank">this guide<a> to manually install it into your chromium browser.
+<a href="https://chromewebstore.google.com/detail/sessionblock/foeoningogiadambbdpgehflhabjhege"><img width="245" alt="sessionblock_unblocked" src="https://github.com/user-attachments/assets/5617fd0e-32a5-4aae-8c4f-0a41bbc35424" /></a>
+<br>
+<br>
+The easiest way is to install it from the <a href="https://chromewebstore.google.com/detail/sessionblock/foeoningogiadambbdpgehflhabjhege">Chrome Webstore</a>.<br> If you'd like to install it manually, you can follow <a href="https://bashvlas.com/blog/install-chrome-extension-in-developer-mode" target="_blank">this guide<a>.
 
 ## Why does SessionBlock need access to my browsing history?
 It is simply so that the blockpage can display the URL of the page that was just blocked.
+<br>
+<br>
 <img width="500" alt="sessionblock_blockpage_history_permission" src="https://github.com/user-attachments/assets/b5e38779-6388-4cb5-97fe-98156c9d8474" />
 
